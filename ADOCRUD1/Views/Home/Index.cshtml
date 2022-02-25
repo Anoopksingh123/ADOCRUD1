@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ADOCRUD1.Models.Emplyoees>
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <table class=" table ">
+        <tr>
+            <th>Id</th>
+            <th>NAME</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Gender</th>
+            <th>Department</th>
+        </tr>
+        @foreach (var emp in Model)
+        {
+    <tr>
+        <td>@emp.ID</td>
+        <td>@emp.name</td>
+        <td>@emp.email</td>
+        <td>@emp.mobile</td>
+        <td>@emp.gender</td>
+        <td>@emp.Dept_name</td>
+    </tr>
+        }
+    </table>
+</div>
